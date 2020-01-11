@@ -129,10 +129,10 @@ namespace SampleApp.Utilities
                             "type isn't permitted or the file's signature " +
                             "doesn't match the file's extension.");
                     }
-                    else
-                    {
+                   
+                    if(modelState.IsValid)
                         return memoryStream.ToArray();
-                    }
+                    
                 }
             }
             catch (Exception ex)
